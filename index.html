@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>اختيار اللعبة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- صفحة اختيار اللعبة -->
+  <div id="menu">
+    <h1>اختر اللعبة:</h1>
+    <button data-game="bingo">لعبة بينقو 6x5</button>
+    <button data-game="topten">لعبة التوب 10</button>
+  </div>
+
+  <!-- لعبة بينقو -->
+  <div id="bingoGame" style="display:none;">
+    <h1>🎲 لعبة بينقو 6x5</h1>
+    <table id="bingoTable"></table>
+    <button onclick="window.location.reload()">إعادة تحميل الأرقام</button>
+  </div>
+
+  <!-- لعبة التوب تن -->
+  <div id="toptenGame" style="display:none;">
+    <div class="game-container">
+      <h1>🎮 لعبة التوب 10</h1>
+      <button id="startBtn">ابدأ اللعبة</button>
+      <p id="timer">05:00</p>
+      <div id="questionsContainer" style="display:none;"></div>
+      <button id="submitBtn" style="display:none;">إرسال الإجابات</button>
+      <button id="finishBtn" style="display:none;">انتهيت</button>
+      <div id="results" style="display:none;">
+        <h2>النتائج</h2>
+        <p id="score"></p>
+        <p id="timeTaken"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ملف JS -->
+  <script src="script.js"></script>
+</body>
+</html>
